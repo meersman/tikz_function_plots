@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1.0]
+  % Configurable parameters
+  \def\pie{3.14159265359}
+  \newcommand{\axlables}{\normalsize}
+  \newcommand{\annotations}{\scriptsize}
+  %
+  % Axes
+  \draw[thick,-Stealth] (-4.3,0) -- (5,0)
+    node[below] {\axlables$x$};
+  \draw[thick,-Stealth] (0,-2.3) -- (0,2.5);
+  % Tick labels
+  \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+  \draw (\x,2pt)--(\x,-2pt) node[below] {\annotations \x$\pi$};
+  % 
+  \draw (-2pt,-2) -- (2pt,-2)  node[left]  {\annotations$-8$};
+  \draw (-2pt,-1) -- (2pt,-1)  node[left]  {\annotations$-4$};
+  \draw (-2pt,1)  -- (2pt,1)   node[right]  {\annotations$4$};
+  \draw (-2pt,2)  -- (2pt,2)   node[right]  {\annotations$8$};
+  %
+  % Plots
+  \draw[color=blue,smooth,domain=-4:4,very thick] plot (\x,{\x*\pie/4*sin(\x*\pie r)}) node[above right] {\axlables$f(x) = x \sin{(x)}$};
+\end{tikzpicture}

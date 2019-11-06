@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=0.9]
+  % Configurable parameters
+  \def\pie{3.14159265359}
+  \newcommand{\axlables}{\normalsize}
+  \newcommand{\annotations}{\scriptsize}
+  %
+  % Axes
+  \draw[thick,-Stealth] (-2.3,0) -- (7.5,0)
+    node[below] {\axlables$x$};
+  \draw[thick,-Stealth] (0,-2.3) -- (0,2.9);
+  % Tick labels
+  \draw (-2,2pt)  -- (-2,-2pt) node[below] {\annotations$-L$};
+  \draw (2,2pt)   -- (2,-2pt)  node[below] {\annotations$L$};
+  \draw (4,2pt)   -- (4,-2pt)  node[below] {\annotations$2L$};
+  \draw (6,2pt)   -- (6,-2pt)  node[below] {\annotations$3L$};
+  \draw (-2pt,-2) -- (2pt,-2)  node[left]  {\annotations$-1$};
+  \draw (-2pt,2)  -- (2pt,2)   node[right]  {\annotations$1$};
+  %
+  % Plots
+  \draw[color=blue,smooth,domain=-2:6,very thick] plot (\x,{-cos(\x*\pie/2 r)+1}) node[right] {\axlables$f^{\text{even}}(x)$};
+  %\draw[samples=100,color=blue,domain=-2:6,very thick] plot (\x,{2*sin(\x*\pie/4 r)*sin(\x*\pie/4 r)}) node[right] {\axlables$f^{\text{even}}(x)$};
+\end{tikzpicture}
