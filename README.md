@@ -25,8 +25,8 @@ make clean
 ```
 
 # Examples
-<img src="eps_figures/function_plot_odd.png" alt="ex1" width="300"/>
-<img src="eps_figures/function_x_sin_x.png" alt="ex2" width="200"/>
+<img src="eps_figures/function_plot_odd.png" alt="ex1" width="400"/>
+<img src="eps_figures/function_x_sin_x.png" alt="ex2" width="450"/>
 
 # Modifying tikz files
 I used a grid in each tikz figure to aid in placing the annotations. Before compiling to eps for distribution it is recommended that the line containing,
