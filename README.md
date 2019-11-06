@@ -41,4 +41,8 @@ The size of the figure can be easily modified by changing the scale at the top o
   ...
 \end{tikzpicture}
 ```
-Note that the axis labels and annotations font size will not change with the scale. Axis labels are currently set to `\small`, annotations are set to `\scriptsize`. Adjust as needed.
+Note that the axis labels and annotations font size will not change with the scale. Axis labels are currently set to `\small`, annotations are set to `\scriptsize`. Adjust as  by changing the redefined label font sizes in the in the configurable parameters section as
+```tex
+\newcommand{\axlables}{\normalsize}
+\newcommand{\annotations}{\scriptsize}
+```
