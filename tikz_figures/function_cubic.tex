@@ -1,0 +1,24 @@
+\begin{tikzpicture}[scale=1.0]
+  % Configurable parameters
+  \def\pie{3.14159265359}
+  \newcommand{\axlables}{\normalsize}
+  \newcommand{\annotations}{\scriptsize}
+  %
+  % Axes
+  \draw[thick,-Stealth] (-3.2,0) -- (3.5,0)
+    node[below] {\axlables$x$};
+  \draw[thick,-Stealth] (0,-3.2) -- (0,3.5);
+  % Tick labels
+%   \draw (-2,2pt)  -- (-2,-2pt) node[below] {\annotations$-L$};
+%   \draw (2,2pt)   -- (2,-2pt)  node[below] {\annotations$L$};
+%   \draw (4,2pt)   -- (4,-2pt)  node[below] {\annotations$2L$};
+%   \draw (6,2pt)   -- (6,-2pt)  node[below] {\annotations$3L$};
+%   \draw (-2pt,-2) -- (2pt,-2)  node[left]  {\annotations$-1$};
+%   \draw (-2pt,2)  -- (2pt,2)   node[right]  {\annotations$1$};
+  %
+  % Plots
+  \draw[color=blue,smooth,domain=-3:3,very thick]
+    plot (\x,{-0.4*(\x)*(\x-2.35)*(\x+2.35)});
+  %\draw[color=blue,smooth,domain=-3:2,very thick]
+  %  plot (\x,{});
+\end{tikzpicture}
